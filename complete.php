@@ -18,7 +18,7 @@ date_default_timezone_set('America/Los_Angeles');
 <h1 class='left'>BBQ Online Store</h1>
 <div class="clear"></div>
 <div>
-<p class="right"><a href="final_project.php">Go Back to Products Page</a></p>
+<p class="right"><a href="index.php">Go Back to Products Page</a></p>
 <div class="clear"></div>
 <?php 
 if ((isset($_SESSION['firstname'])) && (isset($_SESSION['lastname'])) && (isset($_SESSION['phone'])) && (isset($_SESSION['email'])))
