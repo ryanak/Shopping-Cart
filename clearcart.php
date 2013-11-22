@@ -6,7 +6,7 @@ require 'products.inc';
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<META HTTP-EQUIV="refresh" CONTENT="3;URL=final_project.php">
+<META HTTP-EQUIV="refresh" CONTENT="3;URL=index.php">
 <title>Shopping Cart - Clear Cart</title>
 <link href="style.css" rel='stylesheet' type='text/css'/>
 </head>
