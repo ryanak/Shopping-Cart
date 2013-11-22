@@ -4,14 +4,16 @@
 	
 	if((isset($_POST['ordered']))){
 		$_SESSION['orderedlist'] = $_POST['ordered'];
+        $quantity = $_POST['quantity'];
 	}
 
 	if(!empty($_SESSION['orderedlist'])){
 		foreach ($_SESSION['orderedlist'] as $pId){
-			$price[] = number_format($products[$pId]['price'], 2);
+			$price[] = number_format(($products[$pId]['price'] * $quantity[$pId]), 2);
 			$tax =  number_format((array_sum($price) * 0.0775),2);
 			$final = number_format($tax + array_sum($price),2);
-			$items[] = " " . $products[$pId]['name'] . " - " . " Cost: " . "$" . $products[$pId]['price'] . "<br>";
+			$items[] = " " . $products[$pId]['name'] . " - " . " Cost: " . "$" . $products[$pId]['price'] . " - " . " Quantity: " . $quantity[$pId] . "<br>";
+            $_SESSION['quantity']['$pId'] = $quantity[$pId];
 		}
 
 		$_SESSION['price'] = $price;
