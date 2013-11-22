@@ -35,7 +35,7 @@
 	
 	if(!empty($_SESSION['items'])){
 		echo "<div>
-<p class='left'>Your Order: </p><p class='right'><a href='final_project.php'>Return to Order Page</a></p>
+<p class='left'>Your Order: </p><p class='right'><a href='index.php'>Return to Order Page</a></p>
 <div class='clear'></div>";
 		echo "<ul><b>";
 		echo implode("<li></li>", $_SESSION['items']);
@@ -47,7 +47,7 @@
 		echo "<li><br><a href='checkout.php'>Continue with Checkout</a><li>";
 		echo "</ul>";
 	} else {
-		echo "<div><p class='left'>Your Order: </p><p class='right'><a href='final_project.php'>Return to Order Page</a></p>
+		echo "<div><p class='left'>Your Order: </p><p class='right'><a href='index.php'>Return to Order Page</a></p>
     <div class='clear'></div>";
 		echo "Your cart is currently empty.";
 		echo "</div>";
