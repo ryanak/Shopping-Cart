@@ -14,8 +14,8 @@
 		$products[$pId]['checked'] = 'checked';
 	}
 ?>
-<form action="final_project_order.php" method="post">
-<h1 class="left">BBQ Online Store</h1><p class="right"><a href="final_project_order.php">View Current Order</a></p>
+<form action="order.php" method="post">
+<h1 class="left">BBQ Online Store</h1><p class="right"><a href="order.php">View Current Order</a></p>
 <div class="clear"></div>
 <ul>
 <li><h2><?php  echo $products[1]['name']; ?></h2>
