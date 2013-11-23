@@ -13,7 +13,7 @@
 			$tax =  number_format((array_sum($price) * 0.0775),2);
 			$final = number_format($tax + array_sum($price),2);
 			$items[] = " " . $products[$pId]['name'] . " - " . " Cost: " . "$" . $products[$pId]['price'] . " - " . " Quantity: " . $quantity[$pId] . "<br>";
-            $_SESSION['quantity']['$pId'] = $quantity[$pId];
+            $_SESSION['quantity'][$pId] = $quantity[$pId];
 		}
 
 		$_SESSION['price'] = $price;
