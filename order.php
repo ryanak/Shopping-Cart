@@ -4,8 +4,13 @@
 	
 	if((isset($_POST['ordered']))){
 		$_SESSION['orderedlist'] = $_POST['ordered'];
-        $quantity = $_POST['quantity'];
 	}
+
+    if((isset($_POST['quantity'])))
+    {
+         $quantity = $_POST['quantity'];
+    }
+   
 
 	if(!empty($_SESSION['orderedlist'])){
 		foreach ($_SESSION['orderedlist'] as $pId){

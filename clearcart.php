@@ -18,6 +18,7 @@ require 'products.inc';
 <?php
 unset($_SESSION['items']);
 unset($_SESSION['orderedlist']);
+unset($_SESSION['quantity']);
 echo "<p>Your Cart Has Been Cleared. You will be sent back to the order selection page.</p>";
 ?>
 </div>

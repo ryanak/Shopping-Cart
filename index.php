@@ -13,6 +13,13 @@
 	{
 		$products[$pId]['checked'] = 'checked';
 	}
+ for ($i = 1; $i < 11; $i++)
+ {
+    if (!isset($_SESSION['quantity'][$i]))
+    {
+       $_SESSION['quantity'][$i] = 1;
+    }
+ }
 ?>
 <form action="order.php" method="post">
 <h1 class="left">BBQ Online Store</h1><p class="right"><a href="order.php">View Current Order</a></p>
