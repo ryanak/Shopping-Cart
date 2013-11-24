@@ -12,12 +12,10 @@
     }
 
     else
-
     {
         $quantity = $_SESSION['quantity'];
     }
    
-
 	if(!empty($_SESSION['orderedlist'])){
 		foreach ($_SESSION['orderedlist'] as $pId){
 			$price[] = number_format(($products[$pId]['price'] * $quantity[$pId]), 2);
