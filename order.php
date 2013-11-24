@@ -10,6 +10,12 @@
     {
          $quantity = $_POST['quantity'];
     }
+
+    else
+
+    {
+        $quantity = $_SESSION['quantity'];
+    }
    
 
 	if(!empty($_SESSION['orderedlist'])){
