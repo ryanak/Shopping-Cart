@@ -51,7 +51,7 @@
     {
         echo "<div><p class='left'>Your Order: </p><p class='right'><a href='index.php'>Return to Order Page</a></p>
     <div class='clear'></div>";
-		echo "One of your quantities is valid. Please return to the order page and input proper numeric quantities.";
+		echo "One of your quantities is invalid. Please return to the order page and input proper numeric quantities.";
 		echo "</div>";
     }
     elseif (!empty($_SESSION['items'])){
