@@ -65,17 +65,12 @@
 		echo "<li>Final Cost (including tax) " . "<span>$" . $_SESSION['final'] . "</span><li>";
 		echo "<li><br><a href='checkout.php'>Continue with Checkout</a><li>";
 		echo "</ul>";
+        echo "<br><br><a href='clearcart.php'>Clear Cart</a>";
 	} else {
 		echo "<div><p class='left'>Your Order: </p><p class='right'><a href='index.php'>Return to Order Page</a></p><div class='clear'></div>";
 		echo "Your cart is currently empty.";
 		echo "</div>";
 	}
-
-	
-	if(!empty($_SESSION['items']) || $not_numeric_value == !TRUE){
-		echo "<br><br><a href='clearcart.php'>Clear Cart</a>";
-	}
-
 	?>
 </div>
 </body>
