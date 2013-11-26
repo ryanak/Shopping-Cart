@@ -1,14 +1,5 @@
-<?php  session_start(); ?>
-<!DOCTYPE html>
-<html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>Shopping Cart - Select Your Items</title>
-<link href="style.css" rel='stylesheet' type='text/css'/>
-</head>
-<body id="home">
-<?php  require 'products.inc'; ?>
-<?php 
+<?php  session_start(); 
+ require 'products.inc';
 	foreach ($_SESSION['orderedlist'] as $pId)
 	{
 		$products[$pId]['checked'] = 'checked';
@@ -21,6 +12,14 @@
     }
  }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Shopping Cart - Select Your Items</title>
+<link href="style.css" rel='stylesheet' type='text/css'/>
+</head>
+<body id="home">
 <form action="order.php" method="post">
 <h1 class="left">BBQ Online Store</h1><p class="right"><a href="order.php">View Current Order</a></p>
 <div class="clear"></div>
