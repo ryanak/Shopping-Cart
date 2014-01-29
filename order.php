@@ -18,9 +18,9 @@
 		foreach ($_SESSION['orderedlist'] as $pId){
 			
 			if (is_numeric($quantity[$pId]) && $quantity[$pId] > 0) {
-				$price[] = number_format(($products[$pId]['price'] * $quantity[$pId]), 2);
-				$tax =  number_format((array_sum($price) * 0.0775),2);
-				$final = number_format($tax + array_sum($price),2);
+				$price[] = number_format(($products[$pId]['price'] * $quantity[$pId]), 2, ".", "");
+				$tax =  number_format((array_sum($price) * 0.0775), 2, ".", "");
+				$final = number_format(($tax + array_sum($price)), 2, ".", "");
 				$items[] = " " . $products[$pId]['name'] . " - " . " Cost: " . "$" . $products[$pId]['price'] . " - " . " Quantity: " . $quantity[$pId] . "<br>";
 				$_SESSION['quantity'][$pId] = $quantity[$pId];
 			} else {
